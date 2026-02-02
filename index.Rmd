@@ -10,7 +10,7 @@ title: "Po-Lin Wang"
 >
 | Assistant Professor in Risk Management and Insurance
 |
-| Baldwin Risk Partners School of Risk Management and Insurance
+| The Baldwin Group School of Risk Management and Insurance
 | Muma College of Business, Sarasota-Manatee 
 | University of South Florida 
 | 8350 N. Tamiami Trail C-232
@@ -21,18 +21,17 @@ title: "Po-Lin Wang"
 </div>
 
 <div style="margin-left: 20px;">
-<img src="IMG_2279.JPG" alt="Po-Lin Wang Headshot" style="width: 220px; border-radius: 10px; border: 1px solid #ddd;">
+<img src="IMG_2279.JPG" alt="Po-Lin Wang Headshot" style="width: 300px; border-radius: 10px; border: 1px solid #ddd;">
 </div>
 
 </div>
 
 \
 \
-
 
 #### Curriculum vitae
 
-Download my [CV](https://drive.google.com/open?id=1iY_7WMeZUMxZszQbhhsNSfOIvASDP90R)
+Download my [CV](https://drive.google.com/open?id=1KHxqTV9EfH0HjZ88cYIsOXaH9uX30sgy)
 
 #### Research Interests
 
