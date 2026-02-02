@@ -6,22 +6,22 @@ output: html_document
 
 ### University of South Florida
 
-- RMI 4115 Life and Health Insurance Products
-  (Fall 2020, Spring 2021, Spring 2022, Fall 2022, Spring 2023, Fall 2023, Spring 2024, Fall 2024, Fall 2025)
+- RMI 4115 Life and Health Insurance Products<br>
+  Fall 2020, Spring 2021, Spring 2022, Fall 2022, Spring 2023, Fall 2023, Spring 2024, Fall 2024, Fall 2025
 
-- RMI 3011 Principles of Insurance
-  (Spring 2021, Fall 2021, Spring 2022, Fall 2023, Spring 2023, Fall 2023, Spring 2024, Fall 2024, Spring 2025, Spring 2026)
+- RMI 3011 Principles of Insurance<br>
+  Spring 2021, Fall 2021, Spring 2022, Fall 2023, Spring 2023, Fall 2023, Spring 2024, Fall 2024, Spring 2025, Spring 2026
 
-- RMI 4226 Risk and Insurance Data Analytics
-  (Spring 2025, Fall 2025, Spring 2026)
+- RMI 4226 Risk and Insurance Data Analytics<br>
+  Spring 2025, Fall 2025, Spring 2026
 
 ### University of Georgia
 
-- Risk Management and Insurance RMIN 4000 Instructor of Record
-  (Spring 2019, Spring 2020)
+- RMIN 4000 Risk Management and Insurance | Instructor of Record<br>
+  Spring 2019, Spring 2020
 
-- Predictive Modeling BUSN 4000 Teaching Assistant
-  (Fall 2015, Spring 2016, Fall 2016, Spring 2017)
+- Predictive Modeling BUSN 4000 Teaching Assistant<br>
+  Fall 2015, Spring 2016, Fall 2016, Spring 2017
 
-- Statistical Analysis for Business MSIT 3000 Teaching Assistant
-  (Fall 2015, Spring 2016, Fall 2016, Spring 2017)
+- MSIT 3000 Statistical Analysis for Business | Teaching Assistant<br>
+  Fall 2015, Spring 2016, Fall 2016, Spring 2017
