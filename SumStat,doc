@@ -1,0 +1,26 @@
+
+<table style="text-align:center"><caption><strong>Table 2: Summary Statistics</strong></caption>
+<tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Statistic</td><td>Mean</td><td>St. Dev.</td><td>Min</td><td>Max</td></tr>
+<tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">PRICE</td><td>0.091</td><td>0.065</td><td>-0.015</td><td>0.322</td></tr>
+<tr><td style="text-align:left">QUANTITY</td><td>105.711</td><td>312.854</td><td>0.000</td><td>2,251.396</td></tr>
+<tr><td style="text-align:left">VOLATILITY</td><td>0.263</td><td>0.283</td><td>0.028</td><td>1.447</td></tr>
+<tr><td style="text-align:left">RATING</td><td>3.417</td><td>1.809</td><td>1</td><td>14</td></tr>
+<tr><td style="text-align:left">CAP</td><td>0.171</td><td>0.165</td><td>0.039</td><td>0.885</td></tr>
+<tr><td style="text-align:left">SIZE</td><td>20.774</td><td>2.159</td><td>14.332</td><td>26.287</td></tr>
+<tr><td style="text-align:left">STOCK</td><td>0.893</td><td>0.310</td><td>0</td><td>1</td></tr>
+<tr><td style="text-align:left">NATIONAL</td><td>0.627</td><td>0.484</td><td>0</td><td>1</td></tr>
+<tr><td style="text-align:left">SINGLE</td><td>0.127</td><td>0.333</td><td>0</td><td>1</td></tr>
+<tr><td style="text-align:left">NYREG</td><td>0.257</td><td>0.437</td><td>0</td><td>1</td></tr>
+<tr><td style="text-align:left">AGE</td><td>59.534</td><td>37.253</td><td>2.422</td><td>174.030</td></tr>
+<tr><td style="text-align:left">HERF</td><td>0.172</td><td>0.328</td><td>0.009</td><td>1.000</td></tr>
+<tr><td style="text-align:left">REINS</td><td>0.200</td><td>0.240</td><td>0.000</td><td>0.983</td></tr>
+<tr><td style="text-align:left">SPV</td><td>1.077</td><td>0.442</td><td>0.531</td><td>2.308</td></tr>
+<tr><td style="text-align:left">LGVBV</td><td>1.061</td><td>0.515</td><td>0.326</td><td>2.727</td></tr>
+<tr><td style="text-align:left">IP</td><td>0.015</td><td>0.041</td><td>-0.122</td><td>0.069</td></tr>
+<tr><td style="text-align:left">IMBY</td><td>0.041</td><td>0.013</td><td>0.018</td><td>0.063</td></tr>
+<tr><td style="text-align:left">LIFEWRITER</td><td>0.574</td><td>0.495</td><td>0</td><td>1</td></tr>
+<tr><td style="text-align:left">ANNWRITER</td><td>0.377</td><td>0.485</td><td>0</td><td>1</td></tr>
+<tr><td style="text-align:left">GRPWRITER</td><td>0.189</td><td>0.392</td><td>0</td><td>1</td></tr>
+<tr><td style="text-align:left">GFCOVER</td><td>0.664</td><td>0.456</td><td>0</td><td>1</td></tr>
+<tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td colspan="5" style="text-align:left">Note</td></tr>
+</table>

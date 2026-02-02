@@ -1,0 +1,105 @@
+---
+title: "Research"
+output: html_document
+---
+**************
+
+### Publications
+
+- Carson, James M., David Eckles, and Po-Lin Wang, "Market Discipline in the Presence of Price Opacity, Product Complexity, and Guaranty Fund Coverage". The _Financial Review_. 2026 Feb; 61(1):279-303.
+
+- McCarthy D, Wang PL. "Mortality postponement and compression at older ages in human cohorts". _PLoS one_. 2023 Mar 29; 18(3):e0281752.
+
+- McCarthy DG, Wang PL. "Wait your turn: Pension incentives, workplace rules, and labor supply among Philadelphia municipal workers". _Journal of Risk and Insurance_. 2022 Jul 12.
+
+- McCarthy DG, Wang PL. "Pooling mortality risk in Eurozone state pension liabilities: An application of a Bayesian coherent multi-population cohort-based mortality model". _Insurance: Mathematics and Economics_. 2021 Jul 1; 99:459-85.
+
+- McCarthy D, Wang PL. "An analysis of period and Cohort mortality shocks in international data". _North American Actuarial Journal_. 2021 Feb 18; 25(sup1):S385-409.
+
+### Research Under Review
+
+- Miller, Steve, Po-Lin Wang, and Tina Yang, "Does Enterprise Risk Management Deliver Strategic Value? Evidence from Mergers and Acquisitions". Invited to revise and resubmit at the _North American Actuarial Journal_.
+
+- Carson, James, David Eckles, Joshua Frederick, and Po-Lin Wang, "Did the ACA Inject a Healthy Dose of Discipline in the U.S. Health Insurance Market?". Revised and resubmitted at the _North American Actuarial Journal_.
+
+- Wang, Po-Lin, Dan Yang, and Jian Zhang, "Climate Risk Disclosures and Market Perception". Revised and resubmitted at the _Journal of Risk and Insurance_.
+
+- Eastman, Evan, Steve Miller, and Po-Lin Wang, "A Text-based Measure of Corporate Risk Management". Under review at _Management Science_.
+
+- McCarthy, David G. and Po-Lin Wang, "Retirement Planning and the Shape of the Age-at-death Distribution". Under review at the _Journal of Risk and Insurance_.
+
+### Research in Progress
+
+- Eastman, Evan, Po-Lin Wang, and Dan Yang, "Quantifying Insurer Innovation: Characteristics and Outcomes", Working Paper.
+
+- Miller, Steve, Po-Lin Wang, and Tina Yang, "CRO Characteristics and Corporate Risk Management", Working Paper.
+
+- Miller, Steve, and Po-Lin Wang, "Is There an Opimal Level of Corporate Risk Management", Working Paper.
+
+- Chiang, Chia-Chun and Po-Lin Wang "Climate Risk Disclosure and Enterprise Risk Management", Working Paper.
+
+- McCarthy, David G. and Po-Lin Wang, "The Effect of Longevity Risk on the Sustainability and Inter-generational Equity of Public and Private Transfer systems", Working Paper.
+
+### Conference Presentations
+
+- "Quantifying Insurer Innovation: Characteristics and Outcomes" With Evan Eastman and Dan Yang, presented at the 2025 Southern Risk and Insurance Annual Meeting, Charleston, SC
+
+- "Climate Risk Disclosures and Market Perception" With Dan Yang and Jian Zhang, presented at the 2025 World Risk and Insurance Economics Congress, Calgary, Canada
+
+- "Can you see state and local pension deficits from space?". With David McCarthy, presented at the 2025 World Risk and Insurance Economics Congress, Calgary, Canada
+
+- "A text-based measure of corporate risk management". With Evan Eastman and Steve Miller, presented at the 2025 World Risk and Insurance Economics Congress, Calgary, Canada
+
+- "Does Enterprise Risk Management Deliver Strategic Value? Evidence from Mergers and Acquisitions", With Steve Miller and Tian Yang, presented at the 2025 World Risk and Insurance Economics Congress, Calgary, Canada
+
+- "Can you see state and local pension deficits from space?". With David McCarthy, presented at the 2024 American Risk and Insurance Annual Meeting, Denver, CO
+
+- "A text-based measure of corporate risk management". With Evan Eastman and Steve Miller, presented at the 2024 American Risk and Insurance Annual Meeting, Denver, CO
+
+- "Does Enterprise Risk Management Deliver Strategic Value? Evidence from Mergers and Acquisitions", With Steve Miller and Tian Yang, presented at the Eastern Finance Association 2024 Annual Meeting, St. Petersberg, FL
+
+- "Can you see state and local pension deficits from space?". With David McCarthy, presented at the 2023 Southern Risk and Insurance Annual Meeting, Savannah, GA
+
+- "A text-based measure of corporate risk management". With Evan Eastman and Steve Miller, presented at the 2023 Southern Risk and Insurance Annual Meeting, Savannah, GA
+
+- "Mortality postponement and compression at older ages in human cohorts". With David McCarthy, presented by David McCarthy at the 18 International Longevity Risk and Capital Markets Solutions Conference, London, UK
+
+- "Mortality postponement and compression at older ages in human cohorts". With David McCarthy, presented by David McCarthy at the Interdisciplinary Centre on Population, University of Southern Denmark
+
+- "Can you see state and local pension deficits from space?". With David McCarthy, presented at the 2023 American Risk and Insurance Annual Meeting, Washington DC
+
+- "Mortality postponement and compression at older ages in human cohorts". With David McCarthy, presented at the 2022 Southern Risk and Insurance Annual Meeting, New Orleans, LA
+
+- "Are we approaching a biological limit to the length of human life?". With David McCarthy, presented by David McCarthy at the 2022 Population Association of America, Atlanta, GA
+
+- "Choose your pension: an analysis of how pension rules influence overtime work by employees of the City of Philadelphia". With David McCarthy, presented at the 2020 World Risk and Insurance Economics Congress, Virtual Conference
+
+- "Pooling Mortality Risk in Eurozone State Pension Liabilities: an Application of a Bayesian Coherent multi-Population Cohort-based Mortality Model". With David McCarthy, presented at the 2020 World Risk and Insurance Economics Congress, Virtual Conference
+
+- "How diversifiable is the mortality risk in Eurozone state pension liabilities?". With David McCarthy, presented by David McCarthy at the 15 International Longevity Risk and Capital Markets Solutions Conference, Washington D.C.
+
+- "Choose your pension: an analysis of how pension rules influence overtime work by employees of the City of Philadelphia". With David McCarthy, presented at the 2019 S.S. Huebner Doctoral Colloquium, San Francisco, CA
+
+- "Choose your pension: an analysis of how pension rules influence overtime work by employees of the City of Philadelphia". With David McCarthy, presented at the 2019 American Risk and Insurance Annual Meeting, San Francisco, CA
+
+- "Did the ACA Inject a Healthy Dose of Discipline in the U.S. Health Insurance Market?". With James Carson, David Eckles, and Joshua Frederick, presented at the 2019 American Risk and Insurance Annual Meeting, San Francisco, CA
+
+- "An investigation of period and cohort effects in multi-population data, with an application to French regional mortality data from 1901-2014". With David McCarthy, presented at the 2018 Southern Risk and Insurance Annual Meeting, Orlando, FL
+
+- "An analysis of period and cohort mortality shocks in international data". With David McCarthy, presented at the 2018 Southern Risk and Insurance Annual Meeting, Orlando, FL.
+
+- "The effect of longevity risk on the sustainability and inter-generational equity of public and private transfer systems". With David McCarthy, presented by David McCarthy at the 14 International Longevity Risk and Capital Markets Solutions Conference, Amsterdam, Netherlands
+
+- "An investigation of period and cohort effects in multi-population data, with an application to French regional mortality data from 1901-2014". With David McCarthy, presented by David McCarthy at the 14 International Longevity Risk and Capital Markets Solutions Conference, Amsterdam, Netherlands
+
+- "An analysis of period and cohort mortality shocks in international data". With David McCarthy, presented at the 2018 American Risk and Insurance Annual Meeting, Chicago, IL.
+
+- "On the existence of market discipline in the face of product complexity and firm opacity". With James Carson and David Eckles, presented at the 2018 American Risk and Insurance Annual Meeting, Chicago, IL.
+
+- "Smoke’em if you got’em: market discipline in the life insurance industry". With James Carson and David Eckles, presented at the 2017 Southern Risk and Insurance Annual Meeting, Nashville, TN.
+
+- "An investigation of period and cohort effects in adult mortality across 38 countries". With David McCarthy, presented at the 13 International Longevity Risk and Capital Markets Solutions Conference, Taipei, Taiwan
+
+- "Pricing power in life insurance industry". With James Carson and David Eckles, presented at the 2016 Southern Risk and Insurance Annual Meeting, Savannah, GA.
+
+- "A comparison between the Lee-Carter model and a distribution-base cohort model". Presented at the 2016 UGA/FSU Symposium, Tallahassee, FL.

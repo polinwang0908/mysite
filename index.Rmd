@@ -1,0 +1,67 @@
+---
+title: "Po-Lin Wang"
+---
+****************
+
+
+<div style="display: flex; justify-content: space-between; align-items: flex-start;">
+
+<div style="flex: 1;">
+>
+| Assistant Professor in Risk Management and Insurance
+|
+| Baldwin Risk Partners School of Risk Management and Insurance
+| Muma College of Business, Sarasota-Manatee 
+| University of South Florida 
+| 8350 N. Tamiami Trail C-232
+| Sarasota, FL 34243
+|
+| Email: [polinwang@usf.edu](mailto:polinwang@usf.edu)
+| Office Phone: 941-359-4270
+</div>
+
+<div style="margin-left: 20px;">
+<img src="IMG_2279.JPG" alt="Po-Lin Wang Headshot" style="width: 220px; border-radius: 10px; border: 1px solid #ddd;">
+</div>
+
+</div>
+
+\
+\
+
+
+#### Curriculum vitae
+
+Download my [CV](https://drive.google.com/open?id=1iY_7WMeZUMxZszQbhhsNSfOIvASDP90R)
+
+#### Research Interests
+
+Mortality modeling, asset liability management, inter-generational risk transfer, insurance market discipline, textual analysis, and spatial analysis
+
+
+#### Society of Actuary (SOA) Exams Completed:
+
+- P (Probability)
+- FM (Financial Mathematics)
+- MFE (Models for Financial Economics)
+- MLC (Models for Life Contingencies)
+- C (Construction and Evaluation of Actuarial Models)
+
+#### Awards and Honors
+
+- 2019 S.S. Huebner Doctoral Colloquium Scholar
+- 2018 Harris Schlesinger Memorial Doctoral Research Award
+- 2018 University of Georgia RMIN Summer Research Scholarship
+- 2012 Taiwan Insurance Best Performance Award - Best Innovation Product (Co-designer)
+
+#### Programming Languages
+
+- VBA (professional with insurance pricing and reserving experience)
+- Prophet (professional with insurance pricing and reserving experience)
+- Matlab (asset liability optimization projects)
+- R
+- Python
+
+************
+
+Last updated : `r format(Sys.time(), '%B, %Y')`

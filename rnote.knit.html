@@ -1,0 +1,4135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Random Notes</title>
+
+<script src="site_libs/header-attrs-2.21/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Po-Lin Wang</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="about.html">About Me</a>
+</li>
+<li>
+  <a href="research.html">Research</a>
+</li>
+<li>
+  <a href="teaching.html">Teaching</a>
+</li>
+<li>
+  <a href="media.html">In the media</a>
+</li>
+<li>
+  <a href="rnote.html">Random Notes</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Random Notes</h1>
+
+</div>
+
+
+<div id="lln-and-clt" class="section level3">
+<h3>LLN and CLT</h3>
+<ul>
+<li><strong>Law of Large Number</strong>: <span class="math display">\[
+\text{For any small }\epsilon&gt;0,
+Pr(\mid\frac{L_1+L_2+...+L_N}{N}-\mu&lt;\epsilon\mid)\rightarrow1 \text{
+as } N\rightarrow \infty \]</span>
+<ul>
+<li>where <span class="math inline">\(L_i\)</span> can be loss of person
+<span class="math inline">\(i\)</span> and all <span
+class="math inline">\(L_i\)</span> has mean <span
+class="math inline">\(\mu\)</span>.</li>
+<li>This means when sample size is big enough, sample mean will approach
+the true mean.</li>
+<li>LLN is useful when thinking about the more people are insured, the
+actual average loss is close to the true loss.</li>
+</ul></li>
+<li><strong>Central Limit Theorm</strong>: <span class="math display">\[
+\text{Regardless of how } L_i \text{ distributes, }
+\frac{L_1+L_2+...+L_N}{N}\rightarrow Normal (\mu,\sigma/\sqrt{N}) \text{
+as } N\rightarrow \infty.\]</span>
+<ul>
+<li>This means the random variable, sample mean, will become very close
+to normal and get narrower if sample size is big enough.</li>
+<li>CLT is useful when thinking about calculating incident (mortality)
+rate. e.g. The more people are observed for survival(0) or death(1) in
+70 years old, (<span class="math inline">\(L_i\in\{0,1\}\)</span>), then
+<span class="math inline">\(\frac{L_1+L_2+...+L_N}{N}=D/N\)</span> if
+<span class="math inline">\(D\)</span> is the number of deaths. If <span
+class="math inline">\(N\)</span> is big enought, then this probability
+estimation will be close to normally distributed, with a mean close to
+the true <span class="math inline">\(p\)</span> and a standard deviation
+<span class="math inline">\(\sigma/\sqrt{N}\)</span>.</li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="estimation-properties" class="section level3">
+<h3>Estimation properties</h3>
+<ul>
+<li>Small (finite) sample property – apply to all sample sizes (small
+and large)
+<ul>
+<li><strong>Bias</strong>
+<ul>
+<li>An estimator is unbiased if, on average, it hits the true parameter
+value. That is, the mean of the sampling distribution of the estimator
+is equal to the true parameter value.</li>
+<li>Throw darts to an x-y plane, guessing the how “accurate” to throw it
+at center <span class="math inline">\(\Rightarrow\)</span> expected
+value is (0,0) because postive and negative cancel eath other <span
+class="math display">\[E(W)=\theta \Leftrightarrow W\text{ is an
+unbiased estimator of }\theta\]</span></li>
+</ul></li>
+<li><strong>Efficiency</strong>
+<ul>
+<li>Given two unbiased estimators of <span
+class="math inline">\(\theta\)</span>, an estimator <span
+class="math inline">\(W_1\)</span> is efficient relative to <span
+class="math inline">\(W_2\)</span> if <span
+class="math inline">\(Var(W1)\leq Var(W2) \quad \forall
+\theta\)</span></li>
+</ul></li>
+</ul></li>
+<li>Large sample (asymptotic) property
+<ul>
+<li><strong>Consistency</strong>
+<ul>
+<li>An estimator is consistent if, as the sample size increases, the
+estimates (produced by the estimator) “converge” to the true value of
+the parameter being estimated. To be slightly more precise - consistency
+means that, as the sample size increases, the sampling distribution of
+the estimator becomes increasingly concentrated at the true parameter
+value.</li>
+<li>As sample size <span class="math inline">\(n\rightarrow
+\infty\)</span>, <span class="math inline">\(P(\mid
+W_n-\theta\mid&gt;\epsilon)\rightarrow 0\)</span></li>
+</ul></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>Unbiasedness and consistency are not equivalent: Unbiasedness is a
+statement about the expected value of the sampling distribution of the
+estimator. Consistency is a statement about “where the sampling
+distribution of the estimator is going” as the sample size
+increases.</p>
+</blockquote>
+<hr />
+</div>
+<div id="generalized-least-square" class="section level3">
+<h3>Generalized least square</h3>
+<ul>
+<li>GLS <span class="math inline">\(\rightarrow\)</span> WLS (a special
+case of)</li>
+<li>To solve heteroskadastisity (so does robust s.e.)</li>
+</ul>
+<p><span class="math display">\[\Sigma =
+\begin{bmatrix} {1}/{\sigma^2_1} &amp; 0 &amp; 0 &amp; \ldots &amp; 0\\
+0 &amp; {1}/{\sigma^2_2} &amp; 0 &amp; \ldots &amp; 0\\
+0 &amp; 0 &amp; {1}/{\sigma^2_3} &amp; \ldots &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; \ldots &amp; 0\\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+0 &amp; 0 &amp; 0 &amp; \ldots &amp; 1/\sigma^2_n
+\end{bmatrix}\rightarrow \boxed{\text{Weighted by }
+\frac{1}{\sigma^2_i}}
+\]</span></p>
+<hr />
+</div>
+<div id="generalized-method-of-moments" class="section level3">
+<h3>Generalized method of moments</h3>
+<ul>
+<li>It is used to estimate IV</li>
+<li># of parameters &lt; # of moment conditions e.g.</li>
+</ul>
+<p><span class="math display">\[
+\begin{split}
+&amp;\Rightarrow\frac{1}{N}\sum x_i=\hat{\mu} \quad
+&amp;\boxed{\text{Equality}} \\
+&amp;\Rightarrow g_1 = \frac{1}{N}\sum x_i -\hat{\mu}
+\quad&amp;\boxed{\text{Miniize difference}}
+\end{split}
+\]</span></p>
+<hr />
+</div>
+<div id="fixed-effect-clustering" class="section level3">
+<h3>Fixed Effect &amp; Clustering</h3>
+<p>Two ways of getting fixed effect estimation and clustering standard
+errors: <code>plm</code> and <code>felm</code>. They are consistent
+without fixed effect, and are slightly different in degree of freedom
+adjustment when running with either one or both dimensions of fixed
+effect.</p>
+<blockquote>
+<p>When both a firm and a time effect are present in the data,
+researchers can address one parametrically (e.g., by including time
+dummies) and then estimate standard errors clustered on the other
+dimension. Alternatively, researchers can cluster on multiple
+dimensions. When there are a sufficient number of clusters in each
+dimension, standard errors clustered on multiple dimensions are unbiased
+and produce correctly sized confidence intervals whether the firm effect
+is permanent or temporary. ~ Petersen (2008)</p>
+</blockquote>
+<pre class="r"><code># Loading the required libraries
+library(plm)
+library(lmtest)
+library(multiwayvcov)
+library(lfe)
+library(stargazer)
+# Loading Petersen&#39;s dataset
+data(petersen)
+
+# Pooled OLS model
+pooled.ols&lt;-plm(y~x,data=petersen,model=&quot;pooling&quot;,index=c(&quot;firmid&quot;, &quot;year&quot;))
+
+# Fixed effects model
+fe.firm&lt;-plm(y~x,data=petersen,model=&quot;within&quot;,index=c(&quot;firmid&quot;, &quot;year&quot;))</code></pre>
+<table style="text-align:center">
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+y
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>coefficient</em>
+</td>
+<td>
+<em>felm</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>test</em>
+</td>
+<td>
+<em></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+x
+</td>
+<td>
+1.035<sup>***</sup>
+</td>
+<td>
+1.035<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.051)
+</td>
+<td>
+(0.051)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+0.030
+</td>
+<td>
+0.030
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.067)
+</td>
+<td>
+(0.067)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+</td>
+<td>
+5,000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.208
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.208
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+</td>
+<td>
+2.005 (df = 4998)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05;
+<sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<table style="text-align:center">
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+y
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>coefficient</em>
+</td>
+<td>
+<em>felm</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>test</em>
+</td>
+<td>
+<em></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+x
+</td>
+<td>
+1.035<sup>***</sup>
+</td>
+<td>
+1.035<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.033)
+</td>
+<td>
+(0.033)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+0.030
+</td>
+<td>
+0.030
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.023)
+</td>
+<td>
+(0.023)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+</td>
+<td>
+5,000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.208
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.208
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+</td>
+<td>
+2.005 (df = 4998)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05;
+<sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<table style="text-align:center">
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+y
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>coefficient</em>
+</td>
+<td>
+<em>felm</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>test</em>
+</td>
+<td>
+<em></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+x
+</td>
+<td>
+1.035<sup>***</sup>
+</td>
+<td>
+1.035<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.054)
+</td>
+<td>
+(0.054)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+0.030
+</td>
+<td>
+0.030
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.065)
+</td>
+<td>
+(0.065)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+</td>
+<td>
+5,000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.208
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.208
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+</td>
+<td>
+2.005 (df = 4998)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05;
+<sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<table style="text-align:center">
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+y
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>coefficient</em>
+</td>
+<td>
+<em>felm</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>test</em>
+</td>
+<td>
+<em></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+x
+</td>
+<td>
+0.970<sup>***</sup>
+</td>
+<td>
+0.970<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.030)
+</td>
+<td>
+(0.030)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+</td>
+<td>
+5,000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.650
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.611
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+</td>
+<td>
+1.406 (df = 4499)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05;
+<sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<table style="text-align:center">
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+y
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>coefficient</em>
+</td>
+<td>
+<em>felm</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>test</em>
+</td>
+<td>
+<em></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+x
+</td>
+<td>
+0.970<sup>***</sup>
+</td>
+<td>
+0.970<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.027)
+</td>
+<td>
+(0.028)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+</td>
+<td>
+5,000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.650
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.611
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+</td>
+<td>
+1.406 (df = 4499)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05;
+<sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<table style="text-align:center">
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="2">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="2" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+y
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>coefficient</em>
+</td>
+<td>
+<em>felm</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+<em>test</em>
+</td>
+<td>
+<em></em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+x
+</td>
+<td>
+0.970<sup>***</sup>
+</td>
+<td>
+0.970<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.029)
+</td>
+<td>
+(0.029)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+</td>
+<td>
+5,000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.650
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+</td>
+<td>
+0.611
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+</td>
+<td>
+1.406 (df = 4499)
+</td>
+</tr>
+<tr>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="2" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05;
+<sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<hr />
+</div>
+<div id="debugging" class="section level3">
+<h3>Debugging</h3>
+<ul>
+<li>Function to trace back to upper level: <code>recover()</code>.</li>
+</ul>
+<hr />
+</div>
+<div id="r-markdown-note" class="section level3">
+<h3>R Markdown Note</h3>
+<ul>
+<li>Link: <code>[link](http://xxxx.com)</code></li>
+<li>Quote: <code>&gt;abc</code></li>
+<li>Numbered header <code>#.</code></li>
+<li>Stargazer header removal: <code>header=FALSE</code></li>
+<li>Upload website to github:
+<ol style="list-style-type: decimal">
+<li>Build Website</li>
+<li>Command in shell
+<ul>
+<li><code>git add -A</code></li>
+<li><code>git commit -m "My first website"</code></li>
+<li><code>git push origin master</code></li>
+</ul></li>
+</ol></li>
+<li>Matrices
+<ol style="list-style-type: decimal">
+<li>Jacobian
+<ul>
+<li>Change of variable <code>x</code>, <code>y</code> <span
+class="math inline">\(\to\)</span> <code>u</code>, <code>v</code></li>
+<li>Determinant of <span
+class="math display">\[\left[\begin{array}{rr}\frac{dx}{du} &amp;
+\frac{dx}{dv}\\ \frac{dy}{du} &amp; \frac{dy}{dv}\end{array}\right]
+\]</span></li>
+</ul></li>
+<li>Hessian: all combinations of 2nd derivative</li>
+</ol></li>
+<li>Output word file – <code>kableExtra</code> should be taken out. It
+messes with table formatting.</li>
+<li>Dealing with pdflatex.exe
+<code>Sorry, but C:\Users\xxx\AppData\Local\Programs\MIKTEX~1.9\miktex\bin\x64\pdflatex.exe did not succeed</code>
+<ol style="list-style-type: decimal">
+<li>Keep tex file</li>
+<li>Compile tex</li>
+<li>Install (update) whatever is necessary</li>
+</ol></li>
+<li>Update R &amp; rstudio
+<ol style="list-style-type: decimal">
+<li>Windows: installr::updateR()</li>
+<li>MacOS: <a
+href="https://cloud.r-project.org/bin/macosx/">https://cloud.r-project.org/bin/macosx/</a></li>
+</ol></li>
+</ul>
+<hr />
+</div>
+<div id="relevel-factor" class="section level3">
+<h3>Relevel Factor</h3>
+<ul>
+<li>Change reference group to: <code>relevel(RATING,4)</code></li>
+</ul>
+<hr />
+</div>
+<div id="a-list-of-regressions" class="section level3">
+<h3>A List of Regressions</h3>
+<p>Applying the regression function on a list of data gives a
+flexibility and convenience to run hundreds of regression models just
+with 3~4 lines of code.</p>
+<p>The following performs year fixed effect regression with firm
+clustering on a set of varing dependent variables (2) and independent
+variables (11). <code>lapply</code> applies the regression funciton to
+each rating change, and for loop changes the dependent variable through
+<code>NONGRP_AVE</code> and <code>TOTAL_AVE</code>. Differences in the
+dependent variables are recorded in the first dimesion of the list
+<code>[[i]]</code> whereas the differences of independent variables are
+recorded in the second dimension <code>[[i]][[1:11]]</code>. Results are
+presented by <code>stargazer</code> package.</p>
+<pre class="r"><code>my_dep&lt;-c(&quot;NONGRP_AVE&quot;,&quot;TOTAL_AVE&quot;)
+my_lm &lt;-list(1:2)
+#--------------------------------------------------------------------------
+for(i in 1:2){
+my_lm[[i]]&lt;-lapply(1:10, function(x) felm(get(my_dep[i]) ~ I(RATING&gt;x)
+           +SINGLE+HERF+NATIONAL+NYREG+STOCK+SIZE+AGE+lag(REINS)|YEAR|0|COCODE,data=MainData))
+test&lt;-felm(get(my_dep[i]) ~ RATING
+           +SINGLE+HERF+NATIONAL+NYREG+STOCK+SIZE+AGE+lag(REINS)|YEAR|0|COCODE,data=MainData)
+my_lm[[i]][[11]]&lt;-test
+}</code></pre>
+<pre class="r"><code>stargazer::stargazer(my_lm[1],type=&#39;html&#39;,dep.var.labels=my_dep[1])</code></pre>
+<table style="text-align:center">
+<tr>
+<td colspan="12" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="11">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="11" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="11">
+NONGRP
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+<td>
+(3)
+</td>
+<td>
+(4)
+</td>
+<td>
+(5)
+</td>
+<td>
+(6)
+</td>
+<td>
+(7)
+</td>
+<td>
+(8)
+</td>
+<td>
+(9)
+</td>
+<td>
+(10)
+</td>
+<td>
+(11)
+</td>
+</tr>
+<tr>
+<td colspan="12" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+I(RATING &gt; x)
+</td>
+<td>
+-97.697<sup>***</sup>
+</td>
+<td>
+-79.936<sup>***</sup>
+</td>
+<td>
+-67.244<sup>***</sup>
+</td>
+<td>
+-33.182<sup>***</sup>
+</td>
+<td>
+-15.331<sup>**</sup>
+</td>
+<td>
+-7.238
+</td>
+<td>
+-4.379
+</td>
+<td>
+2.816
+</td>
+<td>
+7.817
+</td>
+<td>
+-1.826
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(26.442)
+</td>
+<td>
+(11.482)
+</td>
+<td>
+(8.280)
+</td>
+<td>
+(7.097)
+</td>
+<td>
+(6.584)
+</td>
+<td>
+(5.693)
+</td>
+<td>
+(6.496)
+</td>
+<td>
+(7.269)
+</td>
+<td>
+(8.283)
+</td>
+<td>
+(10.305)
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+RATING
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+-12.762<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(1.849)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+SINGLE
+</td>
+<td>
+-5.737
+</td>
+<td>
+0.173
+</td>
+<td>
+7.253
+</td>
+<td>
+1.143
+</td>
+<td>
+-4.010
+</td>
+<td>
+-6.445
+</td>
+<td>
+-6.988
+</td>
+<td>
+-7.427
+</td>
+<td>
+-7.583
+</td>
+<td>
+-7.237
+</td>
+<td>
+6.889
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(7.753)
+</td>
+<td>
+(7.470)
+</td>
+<td>
+(7.308)
+</td>
+<td>
+(7.521)
+</td>
+<td>
+(7.732)
+</td>
+<td>
+(7.842)
+</td>
+<td>
+(7.861)
+</td>
+<td>
+(7.860)
+</td>
+<td>
+(7.865)
+</td>
+<td>
+(7.872)
+</td>
+<td>
+(7.588)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+HERF
+</td>
+<td>
+37.456
+</td>
+<td>
+56.087<sup>*</sup>
+</td>
+<td>
+68.402<sup>**</sup>
+</td>
+<td>
+46.180
+</td>
+<td>
+37.625
+</td>
+<td>
+34.789
+</td>
+<td>
+34.429
+</td>
+<td>
+32.847
+</td>
+<td>
+32.175
+</td>
+<td>
+33.613
+</td>
+<td>
+65.319<sup>*</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(34.524)
+</td>
+<td>
+(34.040)
+</td>
+<td>
+(34.534)
+</td>
+<td>
+(34.592)
+</td>
+<td>
+(34.884)
+</td>
+<td>
+(34.885)
+</td>
+<td>
+(34.923)
+</td>
+<td>
+(34.973)
+</td>
+<td>
+(34.917)
+</td>
+<td>
+(34.868)
+</td>
+<td>
+(35.197)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+NATIONAL
+</td>
+<td>
+17.129
+</td>
+<td>
+21.939<sup>*</sup>
+</td>
+<td>
+20.638<sup>*</sup>
+</td>
+<td>
+17.185
+</td>
+<td>
+16.513
+</td>
+<td>
+16.736
+</td>
+<td>
+16.660
+</td>
+<td>
+16.845
+</td>
+<td>
+16.814
+</td>
+<td>
+16.784
+</td>
+<td>
+17.462
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(12.557)
+</td>
+<td>
+(12.191)
+</td>
+<td>
+(12.453)
+</td>
+<td>
+(12.713)
+</td>
+<td>
+(12.759)
+</td>
+<td>
+(12.775)
+</td>
+<td>
+(12.787)
+</td>
+<td>
+(12.782)
+</td>
+<td>
+(12.778)
+</td>
+<td>
+(12.780)
+</td>
+<td>
+(12.524)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+NYREG
+</td>
+<td>
+37.970<sup>***</sup>
+</td>
+<td>
+34.696<sup>***</sup>
+</td>
+<td>
+32.860<sup>**</sup>
+</td>
+<td>
+38.385<sup>***</sup>
+</td>
+<td>
+41.189<sup>***</sup>
+</td>
+<td>
+42.375<sup>***</sup>
+</td>
+<td>
+42.619<sup>***</sup>
+</td>
+<td>
+42.805<sup>***</sup>
+</td>
+<td>
+42.837<sup>***</sup>
+</td>
+<td>
+42.740<sup>***</sup>
+</td>
+<td>
+34.538<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(13.497)
+</td>
+<td>
+(13.223)
+</td>
+<td>
+(13.400)
+</td>
+<td>
+(13.825)
+</td>
+<td>
+(13.912)
+</td>
+<td>
+(13.906)
+</td>
+<td>
+(13.896)
+</td>
+<td>
+(13.897)
+</td>
+<td>
+(13.894)
+</td>
+<td>
+(13.891)
+</td>
+<td>
+(13.538)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+STOCK
+</td>
+<td>
+-5.713
+</td>
+<td>
+-11.172
+</td>
+<td>
+-8.333
+</td>
+<td>
+-2.953
+</td>
+<td>
+-4.709
+</td>
+<td>
+-5.567
+</td>
+<td>
+-5.770
+</td>
+<td>
+-5.994
+</td>
+<td>
+-6.206
+</td>
+<td>
+-5.869
+</td>
+<td>
+-2.696
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(15.488)
+</td>
+<td>
+(15.342)
+</td>
+<td>
+(15.627)
+</td>
+<td>
+(15.968)
+</td>
+<td>
+(16.021)
+</td>
+<td>
+(16.045)
+</td>
+<td>
+(16.045)
+</td>
+<td>
+(16.052)
+</td>
+<td>
+(16.081)
+</td>
+<td>
+(16.054)
+</td>
+<td>
+(15.660)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+SIZE
+</td>
+<td>
+22.659<sup>***</sup>
+</td>
+<td>
+16.580<sup>***</sup>
+</td>
+<td>
+16.615<sup>***</sup>
+</td>
+<td>
+21.565<sup>***</sup>
+</td>
+<td>
+23.991<sup>***</sup>
+</td>
+<td>
+24.994<sup>***</sup>
+</td>
+<td>
+25.217<sup>***</sup>
+</td>
+<td>
+25.356<sup>***</sup>
+</td>
+<td>
+25.414<sup>***</sup>
+</td>
+<td>
+25.303<sup>***</sup>
+</td>
+<td>
+18.038<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(2.576)
+</td>
+<td>
+(2.613)
+</td>
+<td>
+(2.907)
+</td>
+<td>
+(3.116)
+</td>
+<td>
+(3.040)
+</td>
+<td>
+(2.890)
+</td>
+<td>
+(2.826)
+</td>
+<td>
+(2.813)
+</td>
+<td>
+(2.816)
+</td>
+<td>
+(2.795)
+</td>
+<td>
+(2.953)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+AGE
+</td>
+<td>
+-0.083
+</td>
+<td>
+-0.032
+</td>
+<td>
+-0.025
+</td>
+<td>
+-0.061
+</td>
+<td>
+-0.094
+</td>
+<td>
+-0.110
+</td>
+<td>
+-0.113
+</td>
+<td>
+-0.117
+</td>
+<td>
+-0.119
+</td>
+<td>
+-0.115
+</td>
+<td>
+-0.007
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.153)
+</td>
+<td>
+(0.150)
+</td>
+<td>
+(0.151)
+</td>
+<td>
+(0.155)
+</td>
+<td>
+(0.157)
+</td>
+<td>
+(0.158)
+</td>
+<td>
+(0.159)
+</td>
+<td>
+(0.159)
+</td>
+<td>
+(0.159)
+</td>
+<td>
+(0.158)
+</td>
+<td>
+(0.151)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+lag(REINS)
+</td>
+<td>
+38.098<sup>**</sup>
+</td>
+<td>
+35.487<sup>**</sup>
+</td>
+<td>
+36.259<sup>**</sup>
+</td>
+<td>
+35.282<sup>**</sup>
+</td>
+<td>
+35.820<sup>**</sup>
+</td>
+<td>
+35.069<sup>**</sup>
+</td>
+<td>
+35.119<sup>**</sup>
+</td>
+<td>
+35.198<sup>**</sup>
+</td>
+<td>
+35.277<sup>**</sup>
+</td>
+<td>
+35.165<sup>**</sup>
+</td>
+<td>
+35.995<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(15.809)
+</td>
+<td>
+(15.296)
+</td>
+<td>
+(15.506)
+</td>
+<td>
+(15.774)
+</td>
+<td>
+(15.847)
+</td>
+<td>
+(15.872)
+</td>
+<td>
+(15.875)
+</td>
+<td>
+(15.883)
+</td>
+<td>
+(15.894)
+</td>
+<td>
+(15.876)
+</td>
+<td>
+(15.616)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="12" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.186
+</td>
+<td>
+0.202
+</td>
+<td>
+0.194
+</td>
+<td>
+0.175
+</td>
+<td>
+0.171
+</td>
+<td>
+0.170
+</td>
+<td>
+0.170
+</td>
+<td>
+0.170
+</td>
+<td>
+0.170
+</td>
+<td>
+0.170
+</td>
+<td>
+0.185
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.184
+</td>
+<td>
+0.201
+</td>
+<td>
+0.192
+</td>
+<td>
+0.173
+</td>
+<td>
+0.169
+</td>
+<td>
+0.168
+</td>
+<td>
+0.168
+</td>
+<td>
+0.168
+</td>
+<td>
+0.168
+</td>
+<td>
+0.168
+</td>
+<td>
+0.183
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error (df = 13459)
+</td>
+<td>
+151.741
+</td>
+<td>
+150.219
+</td>
+<td>
+151.061
+</td>
+<td>
+152.749
+</td>
+<td>
+153.132
+</td>
+<td>
+153.214
+</td>
+<td>
+153.225
+</td>
+<td>
+153.227
+</td>
+<td>
+153.223
+</td>
+<td>
+153.228
+</td>
+<td>
+151.841
+</td>
+</tr>
+<tr>
+<td colspan="12" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="11" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05;
+<sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<pre class="r"><code>stargazer::stargazer(my_lm[2],type=&#39;html&#39;,dep.var.labels=my_dep[2])</code></pre>
+<table style="text-align:center">
+<tr>
+<td colspan="12" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="11">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="11" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="11">
+TOTAL
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+<td>
+(3)
+</td>
+<td>
+(4)
+</td>
+<td>
+(5)
+</td>
+<td>
+(6)
+</td>
+<td>
+(7)
+</td>
+<td>
+(8)
+</td>
+<td>
+(9)
+</td>
+<td>
+(10)
+</td>
+<td>
+(11)
+</td>
+</tr>
+<tr>
+<td colspan="12" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+I(RATING &gt; x)
+</td>
+<td>
+-130.653
+</td>
+<td>
+46.351
+</td>
+<td>
+-160.637
+</td>
+<td>
+-437.823<sup>***</sup>
+</td>
+<td>
+-254.502<sup>**</sup>
+</td>
+<td>
+-230.231<sup>***</sup>
+</td>
+<td>
+-271.076<sup>***</sup>
+</td>
+<td>
+-243.274<sup>***</sup>
+</td>
+<td>
+-262.390<sup>***</sup>
+</td>
+<td>
+-292.255<sup>***</sup>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(244.521)
+</td>
+<td>
+(127.130)
+</td>
+<td>
+(119.996)
+</td>
+<td>
+(122.237)
+</td>
+<td>
+(103.829)
+</td>
+<td>
+(79.973)
+</td>
+<td>
+(85.210)
+</td>
+<td>
+(91.532)
+</td>
+<td>
+(94.030)
+</td>
+<td>
+(104.040)
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+RATING
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+-65.049<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(25.076)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+SINGLE
+</td>
+<td>
+55.107
+</td>
+<td>
+48.729
+</td>
+<td>
+87.758
+</td>
+<td>
+164.143
+</td>
+<td>
+107.276
+</td>
+<td>
+79.488
+</td>
+<td>
+70.912
+</td>
+<td>
+66.062
+</td>
+<td>
+63.340
+</td>
+<td>
+59.371
+</td>
+<td>
+125.252
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(123.888)
+</td>
+<td>
+(124.025)
+</td>
+<td>
+(126.355)
+</td>
+<td>
+(121.644)
+</td>
+<td>
+(120.891)
+</td>
+<td>
+(124.972)
+</td>
+<td>
+(125.521)
+</td>
+<td>
+(125.480)
+</td>
+<td>
+(125.224)
+</td>
+<td>
+(124.819)
+</td>
+<td>
+(123.372)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+HERF
+</td>
+<td>
+-35.390
+</td>
+<td>
+-53.910
+</td>
+<td>
+42.768
+</td>
+<td>
+127.440
+</td>
+<td>
+28.853
+</td>
+<td>
+2.436
+</td>
+<td>
+21.000
+</td>
+<td>
+9.651
+</td>
+<td>
+1.381
+</td>
+<td>
+-11.628
+</td>
+<td>
+121.763
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(482.940)
+</td>
+<td>
+(473.098)
+</td>
+<td>
+(488.152)
+</td>
+<td>
+(491.043)
+</td>
+<td>
+(490.149)
+</td>
+<td>
+(488.438)
+</td>
+<td>
+(489.740)
+</td>
+<td>
+(489.904)
+</td>
+<td>
+(489.091)
+</td>
+<td>
+(487.293)
+</td>
+<td>
+(488.616)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+NATIONAL
+</td>
+<td>
+360.713<sup>**</sup>
+</td>
+<td>
+357.265<sup>**</sup>
+</td>
+<td>
+369.458<sup>**</sup>
+</td>
+<td>
+365.529<sup>**</sup>
+</td>
+<td>
+355.735<sup>**</sup>
+</td>
+<td>
+358.704<sup>**</sup>
+</td>
+<td>
+352.500<sup>**</sup>
+</td>
+<td>
+355.095<sup>**</sup>
+</td>
+<td>
+359.290<sup>**</sup>
+</td>
+<td>
+360.089<sup>**</sup>
+</td>
+<td>
+363.702<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(152.168)
+</td>
+<td>
+(152.774)
+</td>
+<td>
+(153.526)
+</td>
+<td>
+(151.708)
+</td>
+<td>
+(151.925)
+</td>
+<td>
+(152.213)
+</td>
+<td>
+(151.856)
+</td>
+<td>
+(151.967)
+</td>
+<td>
+(152.247)
+</td>
+<td>
+(152.299)
+</td>
+<td>
+(152.038)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+NYREG
+</td>
+<td>
+611.539<sup>***</sup>
+</td>
+<td>
+622.600<sup>***</sup>
+</td>
+<td>
+594.305<sup>***</sup>
+</td>
+<td>
+560.352<sup>***</sup>
+</td>
+<td>
+592.041<sup>***</sup>
+</td>
+<td>
+606.035<sup>***</sup>
+</td>
+<td>
+609.880<sup>***</sup>
+</td>
+<td>
+613.123<sup>***</sup>
+</td>
+<td>
+614.970<sup>***</sup>
+</td>
+<td>
+616.519<sup>***</sup>
+</td>
+<td>
+576.080<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(176.824)
+</td>
+<td>
+(175.978)
+</td>
+<td>
+(174.258)
+</td>
+<td>
+(172.602)
+</td>
+<td>
+(174.346)
+</td>
+<td>
+(175.061)
+</td>
+<td>
+(175.531)
+</td>
+<td>
+(175.717)
+</td>
+<td>
+(175.896)
+</td>
+<td>
+(176.031)
+</td>
+<td>
+(173.261)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+STOCK
+</td>
+<td>
+436.359<sup>***</sup>
+</td>
+<td>
+439.154<sup>***</sup>
+</td>
+<td>
+430.303<sup>***</sup>
+</td>
+<td>
+475.070<sup>***</sup>
+</td>
+<td>
+455.974<sup>***</sup>
+</td>
+<td>
+446.890<sup>***</sup>
+</td>
+<td>
+444.556<sup>***</sup>
+</td>
+<td>
+443.710<sup>***</sup>
+</td>
+<td>
+446.165<sup>***</sup>
+</td>
+<td>
+442.091<sup>***</sup>
+</td>
+<td>
+452.466<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(136.306)
+</td>
+<td>
+(139.835)
+</td>
+<td>
+(135.493)
+</td>
+<td>
+(136.969)
+</td>
+<td>
+(136.165)
+</td>
+<td>
+(136.509)
+</td>
+<td>
+(136.644)
+</td>
+<td>
+(136.808)
+</td>
+<td>
+(136.928)
+</td>
+<td>
+(136.459)
+</td>
+<td>
+(135.493)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+SIZE
+</td>
+<td>
+-5.512
+</td>
+<td>
+3.107
+</td>
+<td>
+-22.745
+</td>
+<td>
+-51.448
+</td>
+<td>
+-23.946
+</td>
+<td>
+-12.206
+</td>
+<td>
+-8.069
+</td>
+<td>
+-5.455
+</td>
+<td>
+-5.255
+</td>
+<td>
+-4.102
+</td>
+<td>
+-39.053
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(29.898)
+</td>
+<td>
+(33.784)
+</td>
+<td>
+(35.889)
+</td>
+<td>
+(35.719)
+</td>
+<td>
+(32.787)
+</td>
+<td>
+(29.991)
+</td>
+<td>
+(28.998)
+</td>
+<td>
+(28.625)
+</td>
+<td>
+(28.588)
+</td>
+<td>
+(28.273)
+</td>
+<td>
+(37.343)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+AGE
+</td>
+<td>
+0.147
+</td>
+<td>
+0.055
+</td>
+<td>
+0.319
+</td>
+<td>
+0.820
+</td>
+<td>
+0.465
+</td>
+<td>
+0.288
+</td>
+<td>
+0.277
+</td>
+<td>
+0.223
+</td>
+<td>
+0.216
+</td>
+<td>
+0.166
+</td>
+<td>
+0.658
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1.752)
+</td>
+<td>
+(1.706)
+</td>
+<td>
+(1.763)
+</td>
+<td>
+(1.754)
+</td>
+<td>
+(1.756)
+</td>
+<td>
+(1.763)
+</td>
+<td>
+(1.767)
+</td>
+<td>
+(1.768)
+</td>
+<td>
+(1.770)
+</td>
+<td>
+(1.767)
+</td>
+<td>
+(1.735)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+lag(REINS)
+</td>
+<td>
+-120.597
+</td>
+<td>
+-124.700
+</td>
+<td>
+-121.909
+</td>
+<td>
+-123.014
+</td>
+<td>
+-113.706
+</td>
+<td>
+-127.694
+</td>
+<td>
+-127.550
+</td>
+<td>
+-127.077
+</td>
+<td>
+-128.148
+</td>
+<td>
+-125.100
+</td>
+<td>
+-120.301
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(154.283)
+</td>
+<td>
+(154.138)
+</td>
+<td>
+(154.464)
+</td>
+<td>
+(154.300)
+</td>
+<td>
+(154.676)
+</td>
+<td>
+(154.227)
+</td>
+<td>
+(154.145)
+</td>
+<td>
+(154.190)
+</td>
+<td>
+(154.173)
+</td>
+<td>
+(154.110)
+</td>
+<td>
+(154.654)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="12" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+<td>
+13,493
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.029
+</td>
+<td>
+0.029
+</td>
+<td>
+0.030
+</td>
+<td>
+0.035
+</td>
+<td>
+0.031
+</td>
+<td>
+0.030
+</td>
+<td>
+0.030
+</td>
+<td>
+0.029
+</td>
+<td>
+0.029
+</td>
+<td>
+0.029
+</td>
+<td>
+0.032
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.027
+</td>
+<td>
+0.026
+</td>
+<td>
+0.027
+</td>
+<td>
+0.033
+</td>
+<td>
+0.028
+</td>
+<td>
+0.027
+</td>
+<td>
+0.027
+</td>
+<td>
+0.027
+</td>
+<td>
+0.027
+</td>
+<td>
+0.027
+</td>
+<td>
+0.029
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error (df = 13459)
+</td>
+<td>
+1,947.611
+</td>
+<td>
+1,947.741
+</td>
+<td>
+1,946.853
+</td>
+<td>
+1,941.258
+</td>
+<td>
+1,945.739
+</td>
+<td>
+1,946.677
+</td>
+<td>
+1,946.925
+</td>
+<td>
+1,947.343
+</td>
+<td>
+1,947.397
+</td>
+<td>
+1,947.496
+</td>
+<td>
+1,944.996
+</td>
+</tr>
+<tr>
+<td colspan="12" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="11" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05;
+<sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<hr />
+</div>
+<div id="multiple-boxplot" class="section level3">
+<h3>Multiple Boxplot</h3>
+<pre class="r"><code>library(tableone)
+CreateTableOne(data=MainData[MainData$PRE==0,],vars=&#39;PRICE&#39;,strata = &#39;NYREG&#39;)</code></pre>
+<pre><code>##                    Stratified by NYREG
+##                     0           1           p      test
+##   n                 2679         760                   
+##   PRICE (mean (SD)) 0.62 (0.27) 0.52 (0.26) &lt;0.001</code></pre>
+<pre class="r"><code>CreateTableOne(data=MainData[MainData$PRE==1,],vars=&#39;PRICE&#39;,strata = &#39;NYREG&#39;)</code></pre>
+<pre><code>##                    Stratified by NYREG
+##                     0           1           p      test
+##   n                 6384        1871                   
+##   PRICE (mean (SD)) 0.60 (0.25) 0.49 (0.22) &lt;0.001</code></pre>
+<pre class="r"><code>ggplot(MainData, aes(x=as.factor(NYREG),y=PRICE,fill=as.factor(NYREG))) + geom_boxplot()+facet_wrap(~PRE)</code></pre>
+<p><img src="rnote_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<!-- *********** -->
+<!-- ### Directly Load HMD Data -->
+<!-- ```{r echo=FALSE, message=FALSE, warning=FALSE} -->
+<!-- user_hmd<-"polinwang@uga.edu" -->
+<!-- pass_hmd<-"Zubaby0822" -->
+<!-- ``` -->
+<!-- ```{r echo=TRUE, message=FALSE, warning=FALSE} -->
+<!-- # load required packages -->
+<!-- library(HMDHFDplus) -->
+<!-- # load life tables for men, USA and JPN -->
+<!-- usa <- readHMDweb('USA', "mltper_1x1", user_hmd, pass_hmd) -->
+<!-- jpn <- readHMDweb('JPN', "mltper_1x1", user_hmd, pass_hmd) -->
+<!-- plot(usa[usa$Year==1933,]$Lx~usa[usa$Year==1933,]$Age,type='l') -->
+<!-- ``` -->
+<hr />
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

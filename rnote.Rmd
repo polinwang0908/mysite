@@ -1,0 +1,285 @@
+---
+title: "Random Notes"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+
+---
+
+### LLN and CLT
+
+- **Law of Large Number**: 
+$$ \text{For any small }\epsilon>0, Pr(\mid\frac{L_1+L_2+...+L_N}{N}-\mu<\epsilon\mid)\rightarrow1 \text{ as } N\rightarrow \infty $$
+    - where $L_i$ can be loss of person $i$ and all $L_i$ has mean $\mu$. 
+    - This means when sample size is big enough, sample mean will approach the true mean.
+    - LLN is useful when thinking about the more people are insured, the actual average loss is close to the true loss.
+
+- **Central Limit Theorm**: 
+$$ \text{Regardless of how } L_i \text{ distributes, } \frac{L_1+L_2+...+L_N}{N}\rightarrow Normal (\mu,\sigma/\sqrt{N}) \text{ as } N\rightarrow \infty.$$ 
+    - This means the random variable, sample mean, will become very close to normal and get narrower if sample size is big enough.
+    - CLT is useful when thinking about calculating incident (mortality) rate. e.g. The more people are observed for survival(0) or death(1) in 70 years old, ($L_i\in\{0,1\}$), then  $\frac{L_1+L_2+...+L_N}{N}=D/N$ if $D$ is the number of deaths. If $N$ is big enought, then this probability estimation will be close to normally distributed, with a mean close to the true $p$ and a standard deviation $\sigma/\sqrt{N}$.
+
+**************
+
+### Estimation properties
+
+- Small (finite) sample property -- apply to all sample sizes (small and large)
+    - **Bias**
+        - An estimator is unbiased if, on average, it hits the true parameter value. That is, the mean of the sampling distribution of the estimator is equal to the true parameter value.
+        - Throw darts to an x-y plane, guessing the how "accurate" to throw it at center $\Rightarrow$ expected value is (0,0) because postive and negative cancel eath other
+$$E(W)=\theta \Leftrightarrow W\text{ is an unbiased estimator of }\theta$$
+    - **Efficiency**
+        - Given two unbiased estimators of $\theta$, an estimator $W_1$ is efficient relative to $W_2$ if $Var(W1)\leq Var(W2) \quad \forall \theta$
+- Large sample (asymptotic) property
+    - **Consistency**
+        - An estimator is consistent if, as the sample size increases, the estimates (produced by the estimator) "converge" to the true value of the parameter being estimated. To be slightly more precise - consistency means that, as the sample size increases, the sampling distribution of the estimator becomes increasingly concentrated at the true parameter value.
+        - As sample size $n\rightarrow \infty$, $P(\mid W_n-\theta\mid>\epsilon)\rightarrow 0$ 
+
+> Unbiasedness and consistency are not equivalent: Unbiasedness is a statement about the expected value of the sampling distribution of the estimator. Consistency is a statement about "where the sampling distribution of the estimator is going" as the sample size increases.
+
+**************
+
+### Generalized least square
+
+- GLS $\rightarrow$ WLS (a special case of)
+- To solve heteroskadastisity (so does robust s.e.)
+
+$$\Sigma =
+\begin{bmatrix} {1}/{\sigma^2_1} & 0 & 0 & \ldots & 0\\ 
+0 & {1}/{\sigma^2_2} & 0 & \ldots & 0\\
+0 & 0 & {1}/{\sigma^2_3} & \ldots & 0\\
+0 & 0 & 0 & \ldots & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+0 & 0 & 0 & \ldots & 1/\sigma^2_n 
+\end{bmatrix}\rightarrow \boxed{\text{Weighted by } \frac{1}{\sigma^2_i}}
+$$
+
+**************
+
+### Generalized method of moments
+
+- It is used to estimate IV
+- \# of parameters < \# of moment conditions e.g.
+
+$$
+\begin{split}
+&\Rightarrow\frac{1}{N}\sum x_i=\hat{\mu} \quad &\boxed{\text{Equality}} \\
+&\Rightarrow g_1 = \frac{1}{N}\sum x_i -\hat{\mu} \quad&\boxed{\text{Miniize difference}}
+\end{split}
+$$
+
+**************
+
+
+### Fixed Effect \& Clustering
+
+Two ways of getting fixed effect estimation and clustering standard errors: `plm` and `felm`. They are consistent without fixed effect, and are slightly different in degree of freedom adjustment when running with either one or both dimensions of fixed effect.
+
+> When both a firm and a time effect are present in the data, researchers can address one parametrically (e.g., by including time dummies) and then estimate standard errors clustered on the other dimension. Alternatively, researchers can cluster on multiple dimensions. When there are a sufficient number of clusters in each dimension, standard errors clustered on multiple dimensions are unbiased and produce correctly sized confidence intervals whether the firm effect is permanent or temporary. ~ Petersen (2008)
+
+```{r, message=FALSE, warning=FALSE,echo=TRUE,include=TRUE}
+# Loading the required libraries
+library(plm)
+library(lmtest)
+library(multiwayvcov)
+library(lfe)
+library(stargazer)
+# Loading Petersen's dataset
+data(petersen)
+
+# Pooled OLS model
+pooled.ols<-plm(y~x,data=petersen,model="pooling",index=c("firmid", "year"))
+
+# Fixed effects model
+fe.firm<-plm(y~x,data=petersen,model="within",index=c("firmid", "year"))
+```
+
+```{r, message=FALSE, warning=FALSE,echo=TRUE,include=TRUE}
+
+# Clustered standard errors - OLS (by firm)
+m1 = coeftest(pooled.ols,vcov=vcovHC(pooled.ols,type="sss",cluster="group"))
+m2 = felm(y~x|0|0|firmid,data=petersen)
+stargazer(m1,m2,type='html')
+
+# Clustered standard errors - OLS (by time)
+m1 = coeftest(pooled.ols,vcov=vcovHC(pooled.ols,type="sss",cluster="time"))
+m2 = felm(y~x|0|0|year,data=petersen)
+stargazer(m1,m2,type='html')
+
+# Clustered standard errors - OLS (by firm and time)
+m1 = coeftest(pooled.ols,vcov=vcovDC(pooled.ols,type="sss"))
+m2 = felm(y~x|0|0|firmid+year,data=petersen)
+stargazer(m1,m2,type='html')
+
+# Clustered standard errors - Fixed effect regression (by firm)
+m1 = coeftest(fe.firm,vcov=vcovHC(fe.firm,type="sss",cluster="group"))
+m2 = felm(y~x|firmid|0|firmid,data=petersen)
+stargazer(m1,m2,type='html')
+
+# Clustered standard errors - Fixed effect regression (by time)
+m1 = coeftest(fe.firm,vcov=vcovHC(fe.firm,type="sss",cluster="time"))
+m2 = felm(y~x|firmid|0|year,data=petersen)
+stargazer(m1,m2,type='html')
+
+# Clustered standard errors - Fixed effect regression (by firm and time)
+m1 = coeftest(fe.firm,vcov=vcovDC(fe.firm,type="sss"))
+m2 = felm(y~x|firmid|0|firmid+year,data=petersen)
+stargazer(m1,m2,type='html')
+
+```
+
+**************
+
+### Debugging
+
+- Function to trace back to upper level: `recover()`.
+
+**************
+
+### R Markdown Note
+
+- Link: `[link](http://xxxx.com)`
+- Quote: `>abc`
+- Numbered header `#.`
+- Stargazer header removal: `header=FALSE`
+- Upload website to github:
+    1. Build Website
+    1. Command in shell
+        - `git add -A`
+        - `git commit -m "My first website"`
+        - `git push origin master`
+- Matrices
+    1. Jacobian
+        - Change of variable `x`, `y` $\to$ `u`, `v`
+        - Determinant of $$\left[\begin{array}{rr}\frac{dx}{du} & \frac{dx}{dv}\\ \frac{dy}{du} & \frac{dy}{dv}\end{array}\right]
+$$
+    1. Hessian: all combinations of 2nd derivative
+- Output word file -- `kableExtra` should be taken out. It messes with table formatting.
+- Dealing with pdflatex.exe
+    `Sorry, but C:\Users\xxx\AppData\Local\Programs\MIKTEX~1.9\miktex\bin\x64\pdflatex.exe did not succeed`
+    1. Keep tex file
+    1. Compile tex
+    1. Install (update) whatever is necessary
+- Update R \& rstudio
+    1. Windows: installr::updateR()
+    2. MacOS: [https://cloud.r-project.org/bin/macosx/](https://cloud.r-project.org/bin/macosx/)
+    
+**************
+
+### Relevel Factor
+
+- Change reference group to: `relevel(RATING,4)`
+
+**************
+
+### A List of Regressions
+
+Applying the regression function on a list of data gives a flexibility and convenience to run hundreds of regression models just with 3~4 lines of code.
+
+The following performs year fixed effect regression with firm clustering on a set of varing dependent variables (2) and independent variables (11). `lapply` applies the regression funciton to each rating change, and for loop changes the dependent variable through `NONGRP_AVE` and `TOTAL_AVE`. Differences in the dependent variables are recorded in the first dimesion of the list `[[i]]` whereas the differences of independent variables are recorded in the second dimension `[[i]][[1:11]]`. Results are presented by `stargazer` package.
+
+```{r, message=FALSE, warning=FALSE,echo=FALSE,include=FALSE}
+rm(list=ls())
+library(reshape)
+library(reshape2)
+library(ggplot2)
+library(plyr)
+library(dplyr)
+library(haven)
+library(plm)
+library(lfe)
+library(data.table)
+library(lmtest)
+library(multiwayvcov)
+library(stargazer)
+library(psych)
+#============================================================================
+Root   <-"~/Google Drive/My Drive/OneDrive - University of South Florida/UGA/NAICData_R/"
+OutPath<-paste(Root,"Life/StatementsData/",sep="")
+#--------------------------------------------------------------------------
+load(paste(Root,"Projects/Project1 - CarsonEckles - life price/DataLife2.Rta",sep=""))
+MainData<-MainData[MainData$MUTUAL==1|MainData$STOCK==1,]
+# 18680 -> lag,winsor,na
+load(paste(Root,"Projects/Project1 - CarsonEckles - life price/AMBest/LH/Rating_AMBest_Full.Rta",sep=""));df_dups <- Data[c("COCODE", "YEAR")];Data<-Data[!duplicated(df_dups),]
+MainData<-left_join(MainData,Data,by=c("YEAR","COCODE"))
+MainData<-na.omit(MainData)
+# 12205 -> lag,winsor,na
+load(paste(OutPath,"REINS.Rta",sep=""))
+MainData<-left_join(MainData,Data)
+MainData<-na.omit(MainData)
+
+load(paste(OutPath,"PolSize.Rta",sep=""))
+Data<-subset(Data,select=c("COCODE","YEAR","TOTAL_AVE","GRP_AVE","NONGRP_AVE"))
+MainData<-left_join(MainData,Data)
+MainData<-na.omit(MainData)
+MainData$PRICE<-winsor(MainData$PRICE,.01)
+MainData$REINS<-winsor(MainData$REINS,.01)
+MainData<-pdata.frame(MainData)
+MainData$lagREINS<-lag(MainData$REINS)
+#--------------------------------------------------------------------------
+```
+```{r, message=FALSE, warning=FALSE,echo=TRUE,include=TRUE}
+my_dep<-c("NONGRP_AVE","TOTAL_AVE")
+my_lm <-list(1:2)
+#--------------------------------------------------------------------------
+for(i in 1:2){
+my_lm[[i]]<-lapply(1:10, function(x) felm(get(my_dep[i]) ~ I(RATING>x)
+           +SINGLE+HERF+NATIONAL+NYREG+STOCK+SIZE+AGE+lag(REINS)|YEAR|0|COCODE,data=MainData))
+test<-felm(get(my_dep[i]) ~ RATING
+           +SINGLE+HERF+NATIONAL+NYREG+STOCK+SIZE+AGE+lag(REINS)|YEAR|0|COCODE,data=MainData)
+my_lm[[i]][[11]]<-test
+}
+```
+```{r, results="asis"}
+stargazer::stargazer(my_lm[1],type='html',dep.var.labels=my_dep[1])
+stargazer::stargazer(my_lm[2],type='html',dep.var.labels=my_dep[2])
+```
+
+***********
+
+### Multiple Boxplot
+
+```{r, message=FALSE, warning=FALSE, stageOne,echo=FALSE,include=FALSE}
+load(paste(Root,"Projects/Project1 - CarsonEckles - life price/MainData_RATING_REIN_WR_test.Rta",sep=""))
+MainData$PRE<-as.numeric(I(MainData$YEAR>=1997))
+```
+```{r, message=FALSE, warning=FALSE, echo=TRUE}
+library(tableone)
+CreateTableOne(data=MainData[MainData$PRE==0,],vars='PRICE',strata = 'NYREG')
+CreateTableOne(data=MainData[MainData$PRE==1,],vars='PRICE',strata = 'NYREG')
+ggplot(MainData, aes(x=as.factor(NYREG),y=PRICE,fill=as.factor(NYREG))) + geom_boxplot()+facet_wrap(~PRE)
+```
+
+<!-- *********** -->
+
+<!-- ### Directly Load HMD Data -->
+
+<!-- ```{r echo=FALSE, message=FALSE, warning=FALSE} -->
+<!-- user_hmd<-"polinwang0908@gmail.com" -->
+<!-- pass_hmd<-"8Dzj7tMb4DNJa@!" -->
+<!-- ``` -->
+<!-- ```{r echo=TRUE, message=FALSE, warning=FALSE} -->
+<!-- # load required packages -->
+<!-- library(HMDHFDplus) -->
+
+<!-- # load life tables for men, USA and JPN -->
+<!-- usa <- readHMDweb('USA', "mltper_1x1", user_hmd, pass_hmd) -->
+<!-- jpn <- readHMDweb('JPN', "mltper_1x1", user_hmd, pass_hmd) -->
+<!-- plot(usa[usa$Year==1933,]$Lx~usa[usa$Year==1933,]$Age,type='l') -->
+<!-- ``` -->
+
+***********
+
+### Conflicts between the tidyverse and other packages
+
+```{r, message=FALSE, warning=FALSE,echo=FALSE,include=TRUE}
+rm(list=ls())
+library(tidycensus)
+library(conflicted)  
+conflict_prefer("filter", "dplyr")
+conflict_prefer("select", "dplyr")
+conflict_prefer("summarize", "dplyr")
+conflict_prefer("mutate", "dplyr")
+conflict_prefer("rename", "dplyr")
+```
