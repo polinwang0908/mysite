@@ -6,6 +6,8 @@ output: html_document
 
 ### Publications
 
+- Carson, James, David Eckles, Joshua Frederick, and Po-Lin Wang, "Did the ACA Inject a Healthy Dose of Discipline in the U.S. Health Insurance Market?". Forthcoming at the _North American Actuarial Journal_.
+
 - Carson, James M., David Eckles, and Po-Lin Wang, "Market Discipline in the Presence of Price Opacity, Product Complexity, and Guaranty Fund Coverage". The _Financial Review_. 2026 Feb; 61(1):279-303.
 
 - McCarthy D, Wang PL. "Mortality postponement and compression at older ages in human cohorts". _PLoS one_. 2023 Mar 29; 18(3):e0281752.
@@ -16,13 +18,12 @@ output: html_document
 
 - McCarthy D, Wang PL. "An analysis of period and Cohort mortality shocks in international data". _North American Actuarial Journal_. 2021 Feb 18; 25(sup1):S385-409.
 
+
+
 ### Research Under Review
 
 - Miller, Steve, Po-Lin Wang, and Tina Yang, "Does Enterprise Risk Management Deliver Strategic Value? Evidence from Mergers and Acquisitions". Invited to revise and resubmit at the _North American Actuarial Journal_.
 
-- Carson, James, David Eckles, Joshua Frederick, and Po-Lin Wang, "Did the ACA Inject a Healthy Dose of Discipline in the U.S. Health Insurance Market?". Revised and resubmitted at the _North American Actuarial Journal_.
-
-- Wang, Po-Lin, Dan Yang, and Jian Zhang, "Climate Risk Disclosures and Market Perception". Revised and resubmitted at the _Journal of Risk and Insurance_.
 
 - Eastman, Evan, Steve Miller, and Po-Lin Wang, "A Text-based Measure of Corporate Risk Management". Under review at _Management Science_.
 
@@ -34,15 +35,23 @@ output: html_document
 
 - Miller, Steve, Po-Lin Wang, and Tina Yang, "CRO Characteristics and Corporate Risk Management", Working Paper.
 
-- Miller, Steve, and Po-Lin Wang, "Is There an Opimal Level of Corporate Risk Management", Working Paper.
+- Miller, Steve, and Po-Lin Wang, "Is There an Optimal Level of Corporate Risk Management", Working Paper.
 
 - Chiang, Chia-Chun and Po-Lin Wang "Climate Risk Disclosure and Enterprise Risk Management", Working Paper.
 
 - McCarthy, David G. and Po-Lin Wang, "The Effect of Longevity Risk on the Sustainability and Inter-generational Equity of Public and Private Transfer systems", Working Paper.
 
+- Wang, Po-Lin, Dan Yang, and Jian Zhang, "Climate Risk Disclosures and Market Perception", Working Paper.
+
 ### Conference Presentations
 
+- "Retirement Planning and the Shape of the Age-at-death Distribution" With David McCarthy, scheduled to be presented at the 2026 American Risk and Insurance Annual Meeting, Orlando, FL
+
+- "Climate Risk Disclosure and Enterprise Risk Management" With Chia-Chun Chiang, scheduled to be presented at the 2026 American Risk and Insurance Annual Meeting, Orlando, FL
+
 - "Quantifying Insurer Innovation: Characteristics and Outcomes" With Evan Eastman and Dan Yang, presented at the 2025 Southern Risk and Insurance Annual Meeting, Charleston, SC
+
+- "Mortality compression and postponement: two competing approaches" With David McCarthy, presented at the 20 International Longevity Risk and Capital Markets Solutions Conference, Singapore
 
 - "Climate Risk Disclosures and Market Perception" With Dan Yang and Jian Zhang, presented at the 2025 World Risk and Insurance Economics Congress, Calgary, Canada
 
