@@ -6,7 +6,9 @@ output: html_document
 
 ### Publications
 
-- Carson, James, David Eckles, Joshua Frederick, and Po-Lin Wang, "Did the ACA Inject a Healthy Dose of Discipline in the U.S. Health Insurance Market?". Forthcoming at the _North American Actuarial Journal_.
+- Miller, Steve, Po-Lin Wang, and Tina Yang, "Does Enterprise Risk Management Deliver Strategic Value? Evidence from Mergers and Acquisitions". Forthcoming at the _North American Actuarial Journal_.
+
+- Carson, James M., David L. Eckles, Joshua D. Frederick, and Po-Lin Wang, "Did the ACA Inject a Healthy Dose of Discipline in the U.S. Health Insurance Market?". _North American Actuarial Journal_. 2026 Apr 21; 1-34.
 
 - Carson, James M., David Eckles, and Po-Lin Wang, "Market Discipline in the Presence of Price Opacity, Product Complexity, and Guaranty Fund Coverage". The _Financial Review_. 2026 Feb; 61(1):279-303.
 
@@ -22,14 +24,13 @@ output: html_document
 
 ### Research Under Review
 
-- Miller, Steve, Po-Lin Wang, and Tina Yang, "Does Enterprise Risk Management Deliver Strategic Value? Evidence from Mergers and Acquisitions". Invited to revise and resubmit at the _North American Actuarial Journal_.
-
-
-- Eastman, Evan, Steve Miller, and Po-Lin Wang, "A Text-based Measure of Corporate Risk Management". Under review at _Management Science_.
+- Wang, Po-Lin, Dan Yang, and Jian Zhang, "Climate Risk Disclosures and Market Perception". Under review at the _Journal of Corporate Finance_.
 
 - McCarthy, David G. and Po-Lin Wang, "Retirement Planning and the Shape of the Age-at-death Distribution". Under review at the _Journal of Risk and Insurance_.
 
 ### Research in Progress
+
+- Eastman, Evan, Steve Miller, and Po-Lin Wang, "A Text-Based Measure of Corporate Risk Management", Working Paper.
 
 - Eastman, Evan, Po-Lin Wang, and Dan Yang, "Quantifying Insurer Innovation: Characteristics and Outcomes", Working Paper.
 
@@ -41,7 +42,9 @@ output: html_document
 
 - McCarthy, David G. and Po-Lin Wang, "The Effect of Longevity Risk on the Sustainability and Inter-generational Equity of Public and Private Transfer systems", Working Paper.
 
-- Wang, Po-Lin, Dan Yang, and Jian Zhang, "Climate Risk Disclosures and Market Perception", Working Paper.
+### Invited Talks
+
+- University of Georgia, Terry College of Business, PhD Seminar in Risk Management and Insurance (Invited Speaker and Discussion Leader), April 2026
 
 ### Conference Presentations
 
