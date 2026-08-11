@@ -6,7 +6,7 @@ output: html_document
 
 ### Publications
 
-- Miller, Steve, Po-Lin Wang, and Tina Yang, "Does Enterprise Risk Management Deliver Strategic Value? Evidence from Mergers and Acquisitions". Forthcoming at the _North American Actuarial Journal_.
+- Miller, Steve M., Po-Lin Wang, and Tina Yang, "Does Enterprise Risk Management Deliver Strategic Value? Evidence from Mergers and Acquisitions". _North American Actuarial Journal_. 2026 Jul 16; 1-35.
 
 - Carson, James M., David L. Eckles, Joshua D. Frederick, and Po-Lin Wang, "Did the ACA Inject a Healthy Dose of Discipline in the U.S. Health Insurance Market?". _North American Actuarial Journal_. 2026 Apr 21; 1-34.
 
@@ -24,7 +24,7 @@ output: html_document
 
 ### Research Under Review
 
-- Wang, Po-Lin, Dan Yang, and Jian Zhang, "Climate Risk Disclosures and Market Perception". Under review at the _Journal of Corporate Finance_.
+- Wang, Po-Lin, Dan Yang, and Jian Zhang, "Climate Risk Disclosure and Market-Based Firm Risk: Evidence from a Large Language Model". Under review at _The Geneva Risk and Insurance Review_.
 
 - McCarthy, David G. and Po-Lin Wang, "Retirement Planning and the Shape of the Age-at-death Distribution". Under review at the _Journal of Risk and Insurance_.
 
@@ -32,7 +32,7 @@ output: html_document
 
 - Eastman, Evan, Steve Miller, and Po-Lin Wang, "A Text-Based Measure of Corporate Risk Management", Working Paper.
 
-- Eastman, Evan, Po-Lin Wang, and Dan Yang, "Quantifying Insurer Innovation: Characteristics and Outcomes", Working Paper.
+- Eastman, Evan, and Po-Lin Wang, "Quantifying Insurer Innovation: Characteristics and Outcomes", Working Paper.
 
 - Miller, Steve, Po-Lin Wang, and Tina Yang, "CRO Characteristics and Corporate Risk Management", Working Paper.
 
@@ -44,15 +44,21 @@ output: html_document
 
 ### Invited Talks
 
-- University of Georgia, Terry College of Business, PhD Seminar in Risk Management and Insurance (Invited Speaker and Discussion Leader), April 2026
+- University of Georgia, Terry College of Business, PhD Seminar in Risk Management and Insurance (Invited Speaker), April 2026
 
 ### Conference Presentations
 
-- "Retirement Planning and the Shape of the Age-at-death Distribution" With David McCarthy, scheduled to be presented at the 2026 American Risk and Insurance Annual Meeting, Orlando, FL
+- "Enterprise Risk Management Program Quality and Climate Risk Disclosure: Evidence from an LLM-based Analysis" With Chia-Chun Chiang, scheduled to be presented at the 2026 Financial Management Association Annual Meeting, Tampa, FL
 
-- "Climate Risk Disclosure and Enterprise Risk Management" With Chia-Chun Chiang, scheduled to be presented at the 2026 American Risk and Insurance Annual Meeting, Orlando, FL
+- "A Text-Based Measure of Corporate Risk Management" With Evan Eastman and Steve Miller, scheduled to be presented at the 2026 Financial Management Association Annual Meeting, Tampa, FL
 
-- "Quantifying Insurer Innovation: Characteristics and Outcomes" With Evan Eastman and Dan Yang, presented at the 2025 Southern Risk and Insurance Annual Meeting, Charleston, SC
+- "Retirement Planning and the Shape of the Age-at-death Distribution" With David McCarthy, presented at the 2026 American Risk and Insurance Annual Meeting, Orlando, FL
+
+- "Climate Risk Disclosure and Enterprise Risk Management" With Chia-Chun Chiang, presented at the 2026 American Risk and Insurance Annual Meeting, Orlando, FL
+
+- "Quantifying Insurer Innovation: Characteristics and Outcomes" With Evan Eastman, presented at the 2026 American Risk and Insurance Annual Meeting, Orlando, FL
+
+- "Quantifying Insurer Innovation: Characteristics and Outcomes" With Evan Eastman, presented at the 2025 Southern Risk and Insurance Annual Meeting, Charleston, SC
 
 - "Mortality compression and postponement: two competing approaches" With David McCarthy, presented at the 20 International Longevity Risk and Capital Markets Solutions Conference, Singapore
 
@@ -115,3 +121,15 @@ output: html_document
 - "Pricing power in life insurance industry". With James Carson and David Eckles, presented at the 2016 Southern Risk and Insurance Annual Meeting, Savannah, GA.
 
 - "A comparison between the Lee-Carter model and a distribution-base cohort model". Presented at the 2016 UGA/FSU Symposium, Tallahassee, FL.
+
+### Panels and Conference Moderation
+
+- Session "Life Insurance" Moderator, the 2026 American Risk and Insurance Annual Meeting, Orlando, FL
+
+- "Assistant, Associate, and Full Professor" Ph.D. Student Research Symposium 2025, Athens, GA
+
+- Session "Flood Insurance" Moderator, the 2024 American Risk and Insurance Annual Meeting, Denver, CO
+
+- "What would I do differently?" Ph.D. Student Research Symposium 2024, Athens, GA
+
+- Session "Life Insurance Issues" Moderator, the 2023 American Risk and Insurance Annual Meeting, Washington, DC

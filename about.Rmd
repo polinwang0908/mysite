@@ -2,7 +2,7 @@
 title: "About"
 ---
 **************
-Po-Lin Wang is an Assistant Professor of Risk Management and Insurance at the University of South Florida Muma College of Business. His expertise lies at the intersection of industry practice and academic research, with a focus on mortality modeling, asset-liability management (ALM), inter-generational risk transfer, textual analysis, and spatial analysis.
+Po-Lin Wang is an Assistant Professor of Risk Management and Insurance at the University of South Florida Muma College of Business. His research examines mortality modeling, generational wealth accounts, insurance market discipline, textual analysis, and spatial analysis.
 
 Prior to joining academia, Po-Lin gained extensive industry experience at Cathay Life Insurance Company in Taiwan and Cathay Conning Asset Management in Hong Kong. He specialized in product development and ALM, with a particular emphasis on developing Economic Capital (EC) models.
 

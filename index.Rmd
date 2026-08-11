@@ -11,10 +11,10 @@ title: "Po-Lin Wang"
 | Assistant Professor in Risk Management and Insurance
 |
 | The Baldwin Group School of Risk Management and Insurance
-| Muma College of Business, Sarasota-Manatee 
+| Muma College of Business
 | University of South Florida 
-| 8350 N. Tamiami Trail C-232
-| Sarasota, FL 34243
+| 4202 E. Fowler Avenue, BSN 3412
+| Tampa, FL 33620, USA
 |
 | Email: [polinwang@usf.edu](mailto:polinwang@usf.edu)
 | Office Phone: 941-359-4270
@@ -31,14 +31,14 @@ title: "Po-Lin Wang"
 
 #### Curriculum vitae
 
-Download my [CV](https://drive.google.com/open?id=17glqrdLVcvlKRUNiJw00TtBmtpoY0B_k)
+Download my [CV](https://drive.google.com/file/d/1A6vP8Jg179-vIdHqRanCTUPsh4e3DMen/view?usp=sharing)
 
 #### Research Interests
 
-Mortality modeling, asset liability management, inter-generational risk transfer, insurance market discipline, textual analysis, and spatial analysis
+Mortality modeling, generational wealth accounts, insurance market discipline, textual analysis, and spatial analysis
 
 
-#### Society of Actuary (SOA) Exams Completed:
+#### Society of Actuaries (SOA) Exams Completed
 
 - P (Probability)
 - FM (Financial Mathematics)
@@ -55,10 +55,11 @@ Mortality modeling, asset liability management, inter-generational risk transfer
 
 #### Programming Languages
 
-- VBA (professional with insurance pricing and reserving experience)
+- Excel VBA (professional with insurance pricing and reserving experience)
 - Prophet (professional with insurance pricing and reserving experience)
 - Matlab (asset liability optimization projects)
-- R
+- R (mortality modeling and generational wealth accounts projects)
+- High-performance computing (parallel computing on the Georgia Advanced Computing Resources Center)
 - Python
 
 ************
