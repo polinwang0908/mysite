@@ -8,11 +8,11 @@ output: html_document
 
 - Miller, Steve M., Po-Lin Wang, and Tina Yang, "Does Enterprise Risk Management Deliver Strategic Value? Evidence from Mergers and Acquisitions". _North American Actuarial Journal_. 2026 Jul 16; 1-35.
 
-- Carson, James M., David L. Eckles, Joshua D. Frederick, and Po-Lin Wang, "Did the ACA Inject a Healthy Dose of Discipline in the U.S. Health Insurance Market?". _North American Actuarial Journal_. 2026 Apr 21; 1-34.
+- Carson, James M., David L. Eckles, Joshua D. Frederick, and Po-Lin Wang, "Did the ACA Inject a Healthy Dose of Discipline into the U.S. Health Insurance Market?". _North American Actuarial Journal_. Published online May 6, 2026; 1-34.
 
-- Carson, James M., David Eckles, and Po-Lin Wang, "Market Discipline in the Presence of Price Opacity, Product Complexity, and Guaranty Fund Coverage". The _Financial Review_. 2026 Feb; 61(1):279-303.
+- Carson, James M., David Eckles, and Po-Lin Wang, "Market Discipline in the Presence of Price Opacity, Product Complexity, and Guaranty Fund Coverage for Life Insurers". _The Financial Review_. 2026 Feb; 61(1):279-303.
 
-- McCarthy D, Wang PL. "Mortality postponement and compression at older ages in human cohorts". _PLoS one_. 2023 Mar 29; 18(3):e0281752.
+- McCarthy D, Wang PL. "Mortality postponement and compression at older ages in human cohorts". _PLOS ONE_. 2023 Mar 29; 18(3):e0281752.
 
 - McCarthy DG, Wang PL. "Wait your turn: Pension incentives, workplace rules, and labor supply among Philadelphia municipal workers". _Journal of Risk and Insurance_. 2022 Jul 12.
 
@@ -125,6 +125,8 @@ output: html_document
 ### Panels and Conference Moderation
 
 - Session "Life Insurance" Moderator, the 2026 American Risk and Insurance Annual Meeting, Orlando, FL
+
+- Moderator, the 2025 World Risk and Insurance Economics Congress, Calgary, Canada
 
 - "Assistant, Associate, and Full Professor" Ph.D. Student Research Symposium 2025, Athens, GA
 

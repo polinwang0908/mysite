@@ -21,20 +21,24 @@ output: html_document
 - Contributed to the design and approval of the Actuarial Science Minor and to USF's Society of Actuaries Universities and Colleges with Actuarial Programs--Introductory Curriculum (UCAP-IC) recognition.
 - Advise students on actuarial exams, coursework, internships, and actuarial career pathways.
 
+### Teaching Innovation and Outreach
+
+- Facilitated _Quantifying Tomorrow: A Cross-Disciplinary Workshop on Data Science, Computer Science, Actuarial Science & AI in Secondary Mathematics_ at USF on May 23, 2026. Developed and led actuarial-science activities for secondary mathematics educators connecting risk, Monte Carlo simulation, insurance pricing, survival probabilities, and present value to grade 6--12 mathematics and Florida B.E.S.T. standards.
+
 ### Industry Guest Speakers
 
-- Integrated industry speakers into RMI 4115, RMI 3011, and RMI 4226 to connect course content with retirement planning, insurance brokerage, actuarial practice, data analytics, and professional careers. Confirmed sessions include Dean R. Piccirillo of HBKS Wealth Advisors in RMI 4115 (April 17, 2024); John Churey and Joe Neeley of RT Specialty in RMI 3011 (April 8, 2025); and an actuary from New York Life in RMI 4226 and RMI 3011 (April 30, 2026).
+- Since 2020, integrated industry speakers into RMI 4115, RMI 3011, and RMI 4226 to connect course content with retirement planning, insurance brokerage, actuarial practice, data analytics, and professional careers. Confirmed sessions include Dean R. Piccirillo of HBKS Wealth Advisors in RMI 4115 (April 17, 2024); John Churey and Joe Neeley of RT Specialty in RMI 3011 (April 8, 2025); and an actuary from New York Life in RMI 4226 and RMI 3011 (April 30, 2026).
 
 ### Student Research-Assistant Supervision
 
-- Supervised Ramya Kosaraju beginning in January 2024 and Iryna Vasko beginning in August 2025. Their work has included data collection, programming, research documentation, empirical analysis, and reproducible data management.
+- Supervised student research assistants Ramya Kosaraju (2024), Iryna Vasko (2025), and Carolina Aldana (2026). Their work has included data collection, programming, research documentation, empirical analysis, and reproducible data management.
 
 ### University of Georgia
 
 - RMIN 4000 Risk Management and Insurance | Instructor of Record<br>
   Spring 2019, Spring 2020
 
-- Predictive Modeling BUSN 4000 Teaching Assistant<br>
+- BUSN 4000 Predictive Modeling | Teaching Assistant<br>
   Fall 2015, Spring 2016, Fall 2016, Spring 2017
 
 - MSIT 3000 Statistical Analysis for Business | Teaching Assistant<br>
