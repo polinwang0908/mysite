@@ -1,0 +1,26 @@
+---
+title: "Service"
+output: html_document
+---
+**************
+
+### Department, College, and University Service
+
+- Assurance of Learning Coordinator, The Baldwin Group School of Risk Management and Insurance (2022--Present)
+- Member, Muma College Undergraduate Policy Committee (2022--Present)
+- Member, RMI Scholarship Committee (2021--Present)
+- Member, Service Performance Evaluation Committee (2022--Present)
+- Served on seven faculty and instructor search committees responsible for eight positions, including the 2026 Senior Instructor search.
+- Reviewed student applications for the London Market Experience and the Mariner's Club/WSIA Extreme Risk Takers professional-development programs (2025).
+- Member, USF Sarasota-Manatee Recruitment and Enrollment Task Force (2020--2021)
+
+### Professional Service
+
+- Reviewer, American Risk and Insurance Association Annual Meeting (2023--Present)
+- Discussant, 2026 American Risk and Insurance Association Annual Meeting, "Financing Homeownership through Pension Savings"
+- Moderator, 2025 World Risk and Insurance Economics Congress
+- Mentor, ARIA First-Time Attendee Mentoring Program (2024)
+- Member, ARIA Hagen Family Foundation Travel Award Committee (2023)
+- Conference-session moderator at the ARIA Annual Meetings in 2023, 2024, and 2026
+- Reviewer for the _Journal of Risk and Insurance_, _The Financial Review_, _Journal of General Management_, and the third edition of the _Handbook of Insurance_
+- Invited speaker and panelist for University of Georgia doctoral professional-development activities (2024--2026)

@@ -7,13 +7,27 @@ output: html_document
 ### University of South Florida
 
 - RMI 4115 Life and Health Insurance Products<br>
-  Fall 2020, Spring 2021, Spring 2022, Fall 2022, Spring 2023, Fall 2023, Spring 2024, Fall 2024, Fall 2025
+  Fall 2020, Spring 2021, Spring 2022, Fall 2022, Spring 2023, Fall 2023, Spring 2024, Fall 2024, Fall 2025, Fall 2026
 
 - RMI 3011 Principles of Insurance<br>
-  Spring 2021, Fall 2021, Spring 2022, Fall 2023, Spring 2023, Fall 2023, Spring 2024, Fall 2024, Spring 2025, Spring 2026
+  Spring 2021, Fall 2021, Spring 2022, Spring 2023, Fall 2023, Spring 2024, Fall 2024, Spring 2025, Spring 2026
 
 - RMI 4226 Risk and Insurance Data Analytics<br>
-  Spring 2025, Fall 2025, Spring 2026
+  Spring 2025, Fall 2025, Spring 2026, Fall 2026
+
+### Curricular and Program Development
+
+- Developed and launched RMI 4226 Risk and Insurance Data Analytics in Spring 2025.
+- Contributed to the design and approval of the Actuarial Science Minor and to USF's Society of Actuaries Universities and Colleges with Actuarial Programs--Introductory Curriculum (UCAP-IC) recognition.
+- Advise students on actuarial exams, coursework, internships, and actuarial career pathways.
+
+### Industry Guest Speakers
+
+- Integrated industry speakers into RMI 4115, RMI 3011, and RMI 4226 to connect course content with retirement planning, insurance brokerage, actuarial practice, data analytics, and professional careers. Confirmed sessions include Dean R. Piccirillo of HBKS Wealth Advisors in RMI 4115 (April 17, 2024); John Churey and Joe Neeley of RT Specialty in RMI 3011 (April 8, 2025); and an actuary from New York Life in RMI 4226 and RMI 3011 (April 30, 2026).
+
+### Student Research-Assistant Supervision
+
+- Supervised Ramya Kosaraju beginning in January 2024 and Iryna Vasko beginning in August 2025. Their work has included data collection, programming, research documentation, empirical analysis, and reproducible data management.
 
 ### University of Georgia
 

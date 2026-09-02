@@ -13,5 +13,7 @@ navbar:
       href: research.html
     - text: "Teaching"
       href: teaching.html
+    - text: "Service"
+      href: service.html
     # - text: "French data test"
     #   href: 'https://polinwang.shinyapps.io/test/'
