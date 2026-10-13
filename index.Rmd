@@ -31,7 +31,8 @@ title: "Po-Lin Wang"
 
 #### Curriculum vitae
 
-Download my [CV](https://drive.google.com/file/d/1w8s2Y5cAsLKaIZcmPoUkeEfljbDnH6cx/view?usp=sharing)
+Download my [CV](https://drive.google.com/file/d/1jBTdHq7mHDGzXlRl6ZaASoFkRVEJcPA6/view?usp=sharing)
+
 
 #### Research Interests
 
@@ -64,4 +65,5 @@ Mortality modeling, generational wealth accounts, insurance market discipline, t
 
 ************
 
-Last updated : `r format(Sys.time(), '%B, %Y')`
+Last updated : September, 2026
+<!-- Last updated : `r format(Sys.time(), '%B, %Y')` -->
