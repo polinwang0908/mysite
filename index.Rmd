@@ -21,7 +21,7 @@ title: "Po-Lin Wang"
 </div>
 
 <div style="margin-left: 20px;">
-<img src="IMG_2279.JPG" alt="Po-Lin Wang Headshot" style="width: 300px; border-radius: 10px; border: 1px solid #ddd;">
+<img src="IMG_1767_2.JPG" alt="Po-Lin Wang Headshot" style="width: 300px; border-radius: 10px; border: 1px solid #ddd;">
 </div>
 
 </div>
